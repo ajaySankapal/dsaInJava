@@ -1,4 +1,4 @@
-package y1_sorting_algorithms;
+package yA_sorting_algorithms;
 
 public class C_insertion_sort {
 
