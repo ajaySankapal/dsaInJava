@@ -21,7 +21,7 @@ public class K_delete_at_given_index {
 		}
 		prev.next = prev.next.next;
 		return head;
-		}
+		}	
 		
 	
 	// take input of the linked list
