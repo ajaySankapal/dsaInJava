@@ -52,8 +52,13 @@ public class E_reverse_linked_list {
 	
 	public static void main(String[] args) {
 		Node<Integer> head = takeInput();
-		head = reverse(head);
-		print(head);
+		Node<Integer> head2 = reverse(head);
+//		print(head);
+		while(head != null && head2!=null) {
+			System.out.println(head.data==head2.data);
+			head = head.next;
+			head2 = head2.next;
+		}
 
 	}
 
