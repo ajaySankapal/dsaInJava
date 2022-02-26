@@ -1,6 +1,6 @@
-package g_linked_list;
+package h_stacks;
 
-//create structure of the node
+
 public class Node<T>{
 	//node has two things data and address of the next node
 	//data

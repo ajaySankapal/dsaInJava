@@ -10,21 +10,21 @@ public class D_pow_x_n {
 //		return res;
 //	}
 	
-//	public static int pow(int x, int n) {
-//	  if(n==0) return 1;
-//	  return x*pow(x,n-1);
-//	}
-
 	public static int pow(int x, int n) {
-		if(n==0) return 1;
-		int ans = 0;
-		if(n%2==0) {
-			ans = pow(x,n/2);
-			return ans*ans;
-		}
-		return x*pow(x,n-1);
-		
+	  if(n==0) return 1;
+	  return x*pow(x,n-1);
 	}
+
+//	public static int pow(int x, int n) {
+//		if(n==0) return 1;
+//		int ans = 0;
+//		if(n%2==0) {
+//			ans = pow(x,n/2);
+//			return ans*ans;
+//		}
+//		return x*pow(x,n-1);
+//		
+//	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int x = 5;
