@@ -4,26 +4,28 @@ public class BinaryTreeUse {
 
 	// print tree using recursion
 	public static void printTree(BinaryTreeNode<Integer> root) {
-//		System.out.println(root.data);
-//		printTree(root.left);
-//		printTree(root.right);
+		System.out.println(root.data);
+		printTree(root.left);
+		printTree(root.right);
 //		// Cannot read field "data" because "root" is null: if we dont handle the base
 //		// case it will give us null pointer exception, because somewhere we reach to
 //		// the point where root becomes null and we are trying to print the data of the null
 	
-//		if(root==null) {
-//			return;
-//		}
-//		System.out.println(root.data);
-//		printTree(root.left);
-//		printTree(root.right);
-		
-		//
 		if(root==null) {
-			return ;
-			
+			return;
 		}
-		System.out.print(root.data+":" );
+		System.out.println(root.data);
+		printTree(root.left);
+		printTree(root.right);
+		
+	}
+	
+	//printTreeDetailed
+	public static void printTreeDetailed(BinaryTreeNode<Integer> root) {
+		if(root == null) {
+			return;
+		}
+		System.out.print(root.data+":");
 		if(root.left != null) {
 			System.out.print("L"+root.left.data);
 		}
@@ -31,8 +33,8 @@ public class BinaryTreeUse {
 			System.out.print(",R"+root.right.data);
 		}
 		System.out.println("");
-		printTree(root.left);
-		printTree(root.right);
+		printTreeDetailed(root.left);
+		printTreeDetailed(root.right);
 	}
 
 	public static void main(String[] args) {
