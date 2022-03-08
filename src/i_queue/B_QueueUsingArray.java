@@ -20,14 +20,14 @@ package i_queue;
 //so instead of going ahead in one direction we should come at beginning in circular fashion and start inserting element at the begining again.
 //this is the concept of "circular queue"
 
-public class QueueUsingArray {
+public class B_QueueUsingArray {
 
 	private int data[]; // array to store the elements of the queue
 	private int front; // index of the element at the front of the queue
 	private int rear; // index of the element at the rear of the queue
 	private int size;
 
-	public QueueUsingArray() {
+	public B_QueueUsingArray() {
 
 		// initialize the size of the array for queue
 		data = new int[5];
