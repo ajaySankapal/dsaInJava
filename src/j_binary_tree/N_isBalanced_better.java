@@ -5,7 +5,7 @@ import java.util.Scanner;
 //what we are doing prior was calculating left and right height and then we are checking if the left and right is balanced or not. this is taking o(n*n) time
 //to optimize this solution what if we check the height and isBalanced at the same time then our problem will be solved in the o(n) time
 //so now we have to define a function which will return us two values the (leftHeight/RightHeight) and isBalanced;
-//but function can return only one value to overcome this we define a class which will contains two values and we have to make the object of that class and return that
+//but function can return only one value, to overcome this we define a class which will contains two values and we have to make the object of that class and return that
 
 
 public class N_isBalanced_better {

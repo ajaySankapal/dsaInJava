@@ -2,6 +2,15 @@ package j_binary_tree;
 
 import java.util.Scanner;
 
+//traversal in binary tree can be classified in two categories
+    //1. Breadth-first-traversal (level order) --> search through a tree one level at a time
+        //traverse through one level of children nodes, then traverse through the level of grandchildren(and so on..)
+
+    //2. Depth-first-traversal   (inorder,preorder,postorder)
+        //traverse thorough the left subtree first and then right subtree.
+
+
+
 //preorder: root-> left -> right
 //          1
 //         / \

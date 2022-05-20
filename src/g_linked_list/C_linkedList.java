@@ -7,7 +7,7 @@ package g_linked_list;
 //    2. ease in insertion and deletion
 //disadvantages
 //    1. can not access elements randomly
-//    2. extra memory space for pointers is required to store the address of the node
+//    2. extra memory space for pointers is required	 to store the address of the node
 //    3. not locality of reference as data is stored in not contagoius fashion
 
 //head is associated to the first node of the linked list

@@ -53,7 +53,7 @@ public class N_check_if_tree_is_balanced_or_not {
 			boolean isLeftBalanced = isBalanced(root.left);   //we are checking at each node if the tree is balanced or not
 			boolean isRightBalanced = isBalanced(root.right);
 			return isLeftBalanced && isRightBalanced;
-		}
+		} 
 		
 		//height of the tree
 		public static int height(BinaryTreeNode<Integer> root) {

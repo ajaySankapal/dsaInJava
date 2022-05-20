@@ -27,7 +27,7 @@ public class J_insert_node_at_given_index {
 				prev = prev.next;
 			}
 			// make before break
-			if (prev != null) {
+			if (prev != null) { 
 				nodeToBeInserted.next = prev.next;
 				prev.next = nodeToBeInserted;
 			}

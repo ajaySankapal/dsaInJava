@@ -7,7 +7,6 @@ public class A_take_input_of_binary_tree {
 	public static BinaryTreeNode<Integer> takeInput(){
 	
 		System.out.println("enter root data:");
-		
 		Scanner s = new Scanner(System.in);
 		int rootData = s.nextInt();
 		if(rootData==-1) {

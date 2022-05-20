@@ -18,7 +18,6 @@ public class C_insert_node_recursively {
 						tail.next = currentNode;
 						tail = tail.next;
 					}
-
 					data = s.nextInt();
 				}
 				return head;
