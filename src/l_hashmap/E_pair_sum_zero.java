@@ -14,7 +14,9 @@ public class E_pair_sum_zero {
 				map.put(i, 1);
 			}
 		}
-		
+		for(int key:map.values()) {
+			
+		}
 		
 		return map;
 	}
