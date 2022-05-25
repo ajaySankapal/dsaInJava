@@ -15,13 +15,13 @@ public class Map<k,v> {
 			buckets.add(null);
 		}
 	}
-	public int getBucketIndex(k key) {
+	private int getBucketIndex(k key) {
 		int hc = key.hashCode();
 		int index = hc%numBuckets;
 		return index;
 	}
 	
-	//insert element into the hashmap
+//1. insert element into the hashmap
 	public void insert(k key,v value) {
 		int bucketIndex = getBucketIndex(key);
 		MapNode<k,v> head = buckets.get(bucketIndex);
@@ -48,6 +48,47 @@ public class Map<k,v> {
 		buckets.set(bucketIndex, newNode);
 		count++;
 		
+	}
+	
+//2. size of the hashmap
+	public int size() {
+		return count;
+	}
+	
+//3. get value 
+	public v getValue(k key) {
+		
+		int bucketIndex = getBucketIndex(key);
+		MapNode<k,v> head = buckets.get(bucketIndex);
+	     
+		while(head != null) {
+			if(head.key.equals(key)) {
+				return head.value;
+			}
+			head = head.next;
+		}
+		return null;
+	}
+	
+//4. remove key
+	public v removeKey(k key) {
+		int bucketIndex = getBucketIndex(key);
+		MapNode<k,v> head = buckets.get(bucketIndex);
+		MapNode<k,v> prev = null;
+		while(head != null) {
+			if(head.key.equals(key)) {
+				if(prev != null) {
+					prev.next = head.next;
+				}else {
+					buckets.set(bucketIndex, head.next);
+				}
+
+			}
+			
+			prev = head;
+			head = head.next;
+		}
+		return null;
 	}
 	
 }
