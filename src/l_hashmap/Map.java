@@ -47,6 +47,10 @@ public class Map<k,v> {
 		//storing the reference of the head of the newly created linked list in the bucketIndex
 		buckets.set(bucketIndex, newNode);
 		count++;
+		double loadFactor = (1.0*count)/numBuckets;
+		if(loadFactor>0.7) {
+			reHash();
+		}
 		
 	}
 	
@@ -82,7 +86,8 @@ public class Map<k,v> {
 				}else {
 					buckets.set(bucketIndex, head.next);
 				}
-
+				count--;
+				return head.value;
 			}
 			
 			prev = head;
@@ -91,4 +96,36 @@ public class Map<k,v> {
 		return null;
 	}
 	
+	//rehashing
+	private void reHash() {
+		ArrayList<MapNode<k,v>> temp = buckets;
+		buckets = new ArrayList<>();
+		for(int i = 0; i<2*numBuckets;i++) {
+			buckets.add(null);
+		}
+		count = 0;
+		numBuckets = numBuckets*2;
+		for(int i = 0; i< temp.size();i++) {
+			MapNode<k,v> head = temp.get(i);
+			while(head != null) {
+				k key = head.key;
+				v value = head.value;
+				insert(key,value);
+				head = head.next;
+			}
+		}
+	}
+	
+	
+	
 }
+
+
+
+
+//load factor 
+// n/b < 0.7
+//n is number of entries and b is number of buckets
+
+
+//if the n/b > 0.7 then we rehash that mean we will increase the bucketsize
